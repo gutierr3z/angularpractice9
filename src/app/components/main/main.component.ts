@@ -8,7 +8,15 @@ import { DataService } from '../../services/data.service';
 })
 export class MainComponent implements OnInit {
 
-  constructor( public dataService:DataService ) { }
+  users:string[];
+
+  constructor( public dataService:DataService ) { 
+
+    this.dataService.getUsers().subscribe( users => {
+      console.log( users );
+      this.users = users;
+    });
+  }
 
   ngOnInit() {
   }
