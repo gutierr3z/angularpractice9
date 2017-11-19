@@ -11,3 +11,4 @@ export class DataService {
     return this.http.get( 'http://jsonplaceholder.typicode.com/users' ).map( res => res.json() );
   }
 }
+
