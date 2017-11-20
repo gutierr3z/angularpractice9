@@ -9,12 +9,13 @@ import { DataService } from '../../services/data.service';
 export class MainComponent implements OnInit {
 
   users:string[];
+  flag1:boolean = true;
 
   constructor( public dataService:DataService ) { 
 
-    this.dataService.getUsers().subscribe( users => {
-      console.log( users );
-      this.users = users;
+    this.dataService.getUsers().subscribe( usersx => {
+      console.log( usersx );
+      this.users = usersx;
     });
   }
 

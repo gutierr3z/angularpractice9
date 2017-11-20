@@ -1,3 +1,32 @@
-<p>
-  main works!
-</p>
+
+<hr>
+<h4>ngFor</h4>
+<ul>
+  <li *ngFor = "let usr of users; let i = index">{{ i + 1 }} - {{ usr.name }}</li>
+</ul>
+
+<hr>
+<h4>ngIf</h4>
+<div *ngIf = "flag1">flag1 is true</div>
+<div *ngIf = "!flag1">flag1 is false</div>
+
+<hr>
+<h4>ternary</h4>
+<div>ternary flag1 {{ flag1 ? 'is true' : 'is false' }}</div>
+
+<hr>
+<h4>ngTemplate</h4>
+<div *ngIf = "flag1; else XXX">flag1 is true</div>
+<ng-template #XXX>flag1 is false</ng-template>
+
+<hr>
+<h4>ngSwitch</h4>
+<div [ngSwitch] = "flag1">
+  <div *ngSwitchCase = "true">flag1 is true</div>
+  <div *ngSwitchCase = "false">flag1 is false</div>
+  <div *ngSwitchDefault>no clue about flag1</div>
+</div>
+
+<hr>
+<h4>ngClass</h4>
+
